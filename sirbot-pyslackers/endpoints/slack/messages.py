@@ -71,6 +71,11 @@ async def stock_quote(message, app):
                     "fields": [
                         {
                             "title": "Open",
+                            "value": f'${quote["change"]:,.4f} (${quote["changePercent"] * 100:,.4f})',
+                            "short": True,
+                        },
+                        {
+                            "title": "Open",
                             "value": f'${quote["open"]:,.4f}',
                             "short": True,
                         },
